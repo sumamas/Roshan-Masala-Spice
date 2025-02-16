@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -174,8 +175,11 @@ body {
 }
 
 .carousel-caption h5 {
-    font-size: 45px;
+    font-size: 50px;
     text-shadow: 2px 2px 4px #000000;
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .carousel-caption p {
@@ -187,4 +191,13 @@ body {
     text-shadow: 1px 1px 2px #000000;
 }
 
+@media (max-width: 980px) {
+    .carousel {
+        height: 60vh;
+        width: 100%;
+    }
+    .carousel-item img{
+        height: 60vh;
+    }
+}
 
