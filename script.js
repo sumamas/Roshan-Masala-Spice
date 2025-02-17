@@ -11,12 +11,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+
 // indicators button carousel none
-// let toggal_button=document.getElementById('toggal')
+let toggal_button=document.getElementById('toggal')
 
+toggal_button.addEventListener('click', function(){
+    let indicators_button=document.querySelectorAll('.indicators')
+    indicators_button.forEach(button => button.style.display = 'none');
+})
 
-// toggal_button.addEventListener('click', function(){
-//     let indicators_button=document.querySelector('.indicators')
-//     indicators_button.classList.toggle('none')
-    
-// })
+offcanvasNavbar.addEventListener('hide.bs.offcanvas', function () {
+    let indicators_button=document.querySelectorAll('.indicators')
+    indicators_button.forEach(button => button.style.display = 'block');
+})
