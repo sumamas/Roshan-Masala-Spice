@@ -217,6 +217,7 @@ body {
     text-align: left;
     color: #ffaa2ae3;
     padding: 50px;
+    z-index: 1;
 }
 .banner::after {
     content: '';
