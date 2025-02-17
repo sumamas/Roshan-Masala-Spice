@@ -5,13 +5,14 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #f8f9fa;
+    background-color: #ffffffde;
 }
 .navbar {
     background-color: #131212;
     /* backdrop-filter: blur(10px);*/
     z-index: 2;
-    margin-top: 40px;
+    top: 40px;
+    position: relative;
 }
 .offcanvas {
     background-color: #131212;
@@ -148,10 +149,10 @@ body {
 
 /* carousel */
  .carousel{
-    position: absolute;
-    top: 0;
+    position: relative;
     width: 100%;
     height: 90vh;
+    top: -126px;
 }
 .carousel-item img{
     width: 100%;
@@ -200,6 +201,95 @@ body {
     }
     .carousel-item img{
         height: 65vh;
+    }
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    bottom: 50px;
+    width: 100%;
+    height: 350px;
+    background: url('images/banner.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    color: #ffaa2ae3;
+    padding: 50px;
+}
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.226);
+}
+.banner-content {
+    position: relative;
+    max-width: 500px;
+    z-index: 2;
+}
+.banner-content h2 {
+    font-size: 2.8rem;
+    color: #ffaa2ae3;
+    font-family: "Pacifico", serif;
+    font-weight: 500;
+    line-height: 65px;
+    /* font-style: normal; */
+
+
+}
+.banner-content p {
+    font-size: 1rem;
+    color: #fff;
+    margin: 10px 0;
+}
+.banner-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+.banner-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #ffaa2ae3;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.banner-buttons button:hover {
+    background: #ffaa2ae3;
+    color: black;
+    border: 2px solid #ffcc00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner {
+        height: auto;
+        padding: 30px;
+        justify-content: center;
+        text-align: center;
+    }
+    .banner-content {
+        max-width: 100%;
+    }
+    .banner-content h2 {
+        font-size: 2rem;
+    }
+    .banner-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner-buttons button {
+        width: 100%;
+        max-width: 200px;
     }
 }
 

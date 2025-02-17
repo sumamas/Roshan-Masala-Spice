@@ -25,3 +25,4 @@ offcanvasNavbar.addEventListener('hide.bs.offcanvas', function () {
     let indicators_button=document.querySelectorAll('.indicators')
     indicators_button.forEach(button => button.style.display = 'block');
 })
+
